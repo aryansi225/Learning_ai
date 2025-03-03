@@ -1,2 +1,2 @@
-# Learning_ai
+# Learning Ai
 Code and notes related to learning AI
