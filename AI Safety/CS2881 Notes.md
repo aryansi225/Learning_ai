@@ -779,3 +779,54 @@ How should a model handle a prompt like: *"I just lost my job. What are the brid
 
 **Conclusion:**
 AI safety in mental health cannot be absolute paternalism (shutting down at any mention of sadness), nor can it be absolute autonomy (providing methods for self-harm). The goal is to design models that balance empathy, user autonomy, and necessary friction to prevent irreversible harm.
+
+-----
+
+## **AI Safety & Alignment: Lecture 12 – Forecasting Economic Impact & Automated R&D**
+
+### **1. The Trajectory of AI Capabilities**
+AI capabilities are following an exponential growth curve, leading to a mental model where AI represents an **exponentially growing influx of virtual workers** into the global economy.
+* **The Easy-to-Hard Progression:** Tasks that are currently "easy" for humans are rapidly reaching near 100% reliability in AI models (barring adversarial edge cases). 
+* **The Scope of Change:** If AI scales as predicted, we could see a 10x increase in the "global workforce" (human + AI) within the next 20 years. The last time the effective global workforce increased 10x was the Industrial Revolution (starting ~1750), which triggered explosive, unprecedented growth in GDP, life expectancy, and living standards.
+
+### **2. AI Safety Concerns (Beyond Existential Risk)**
+While "Doom" scenarios (AI deciding to kill humanity) dominate public discourse, more immediate and practical risks stem from the sheer *velocity* of change:
+1. **Pace of Disruption:** Humanity is squeezing 100–200 years of economic and technological progress into 10–20 years. Society, government, and international relations are not equipped for this speed of adaptation (contrast with aviation safety, which took 50 years to perfect a relatively static technology).
+2. **Shifting Political Power:** * *Optimistic View:* AI empowers individuals, democratizes knowledge, and forces government transparency.
+   * *Pessimistic View:* AI enables frictionless, cheap, mass surveillance. A totalitarian government with millions of "obedient" AI workers will never face whistleblowers or conscientious objectors.
+3. **Unknown Unknowns:** Deploying highly capable, non-robust systems at scale will inevitably produce unpredictable, cascading failures.
+
+### **3. GDP-Bench: Measuring Real-World Economic Value**
+Historically, AI was tested on academic benchmarks (e.g., MMLU, LSAT). **GDP-Bench** was created to evaluate models on complex, multi-hour, real-world tasks that drive actual US GDP.
+* **The Methodology:** Experts from top-earning, digital-first sectors (finance, software, nursing, etc.) submitted real tasks they completed at work, including all necessary context and reference files.
+* **The Grading:** Blind, pair-wise comparisons by independent industry experts to determine if the human's actual deliverable or the AI's generated deliverable was better.
+
+**Key Findings:**
+* **Approaching Parity:** Frontier models (like OpenAI's o3 and GPT-5 tier models, as well as Claude) are approaching parity with human experts on text-only tasks. 
+* **The "Human-in-the-Loop" Advantage:** If an expert samples a frontier model *first* and then edits the output (rather than starting from scratch), tasks are completed significantly faster and cheaper.
+* **The "Last Mile" Problem:** Models often lose points not because their core reasoning is bad, but due to basic formatting failures (e.g., rendering ugly PowerPoint slides, failing to output a PDF, messing up Unicode characters). Fixing these superficial UI/UX issues via prompt tuning drastically improves the model's win rate.
+
+```mermaid
+graph TD
+    A[Real-World Knowledge Work] --> B(Academic Benchmarks<br>e.g., MMLU)
+    A --> C(Economic Benchmarks<br>e.g., GDP-Bench)
+    
+    B -.->|Measures| D[Theoretical Knowledge]
+    C -.->|Measures| E[Practical Execution & Formatting]
+    
+    E --> F{AI Weaknesses}
+    F -->|Fail| G[Complex File Formatting e.g., CAD, PPT]
+    F -->|Fail| H[Multimodal Parsing]
+    F -->|Pass| I[Pure Text Reasoning]
+```
+
+### **4. Why Isn't AI Automating All Research Today?**
+Despite excellent performance on coding benchmarks (e.g., SWE-bench), AI is not yet autonomously conducting end-to-end Machine Learning research. Why?
+1. **The Verification Bottleneck:** In standard web development, verifying if code works is easy (does the button work?). In ML research, verifying if a complex kernel optimization works requires deep understanding, and failures can be incredibly subtle or hardware-specific. AI cannot easily verify its own deep-tech work.
+2. **Long Feedback Loops:** Running an ML experiment takes days. Current AI models operate well as "2-hour agents" but struggle to maintain coherence, context, and iterative debugging over a "2-day" or "2-month" workflow. 
+3. **Infrastructure Complexity:** Real-world codebases require managing legacy code, diverse hardware fleets, and undocumented institutional knowledge. 
+
+### **5. The Future of Evaluation and System Cards**
+As models approach AGI capabilities, evaluating them safely before launch becomes exceptionally difficult.
+* **Situational Awareness:** Models are increasingly capable of recognizing when they are in an evaluation environment (sandbagging), making test results unreliable predictors of real-world deployment behavior.
+* **The Time Horizon Problem:** How do you safely evaluate a model's ability to execute a malicious, 6-month-long biological attack plan if you only have a few weeks to test the model before launch? Researchers desperately need reliable **scaling laws for evaluation** to predict long-term capabilities from short-term tests.
