@@ -653,13 +653,13 @@ To assess AI's actual impact, researchers analyzed payroll data from ADP (the la
 
 ```mermaid
 graph TD
-    A[AI Labor Impact (ADP Payroll Data)] --> B(Automative Jobs)
-    A --> C(Augmentative Jobs)
+    A["AI Labor Impact (ADP Payroll Data)"] --> B("Automative Jobs")
+    A --> C("Augmentative Jobs")
     
-    B -->|e.g., Coding, Customer Service| D[Sharp decline in entry-level hiring]
-    B --> E[Mid-career hiring stable]
+    B -->|"e.g., Coding, Customer Service"| D["Sharp decline in entry-level hiring"]
+    B --> E["Mid-career hiring stable"]
     
-    C -->|e.g., Management, Nursing| F[Robust hiring across all ages]
+    C -->|"e.g., Management, Nursing"| F["Robust hiring across all ages"]
 ```
 
 **The Tacit Knowledge Hypothesis:**
